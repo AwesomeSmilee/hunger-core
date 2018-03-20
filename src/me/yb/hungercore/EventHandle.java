@@ -11,6 +11,8 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import java.util.HashMap;
+
 public class EventHandle implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
@@ -18,11 +20,13 @@ public class EventHandle implements Listener {
         e.setJoinMessage(null);
         Bukkit.broadcastMessage("§a+ §2» §f" + p.getName() + " §7joined the server!");
         p.teleport(new Location(p.getWorld(), 0.0, 100.0, 0.0, -90.0f, 0.0f));
-        p.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 200000, -1, false, false));
-
+        p.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 200000, 256, false, false));
     }
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
+        Player p = e.getPlayer();
+        e.setQuitMessage(null);
+        Bukkit.broadcastMessage("§c- §2» §f" + p.getName() + " §7left the server.");
 
     }
 }
