@@ -6,13 +6,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HungerCore extends JavaPlugin {
-    private static HungerCore instance;
+    public static HungerCore instance;
     public static ArrayList<Player> inGame = new ArrayList<>();
-    public static HungerCore inst() {
-        return instance;
-    }
+    public static HashMap<Player, Integer> menuSel = new HashMap<>();
     @Override
     public void onEnable() {
         System.out.print("[HC] HungerCore class loaded");
@@ -28,6 +27,7 @@ public class HungerCore extends JavaPlugin {
                     // Displays
                     if (inGame.contains(p)) {
                         HUD.displayMenu(p, yaw);
+                        HUD.displayBossBar(p, yaw);
                     } else {
 
                     }
