@@ -15,6 +15,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class HUD {
     public static void menu(Player p) {
@@ -27,6 +28,15 @@ public class HUD {
         for (Player other : Bukkit.getOnlinePlayers()) {
             other.hidePlayer(HungerCore.instance, p);
         }
+    }
+    public static void game(Player p) {
+        for (Player other : Bukkit.getOnlinePlayers()) {
+            other.showPlayer(HungerCore.instance, p);
+        }
+    }
+    public static void newGame(Player p) {
+        // TODO : Generate new random location
+        game(p);
     }
     public static void displayMenu(Player p, Float yaw) {
         // Init menu items
