@@ -9,15 +9,10 @@
     <list default="true" id="8e9effb0-b785-4157-839e-a0373bb41de2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/hunger-core.jar" afterPath="$PROJECT_DIR$/out/hunger-core.jar" />
-      <change beforePath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/EventHandle.class" afterPath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/EventHandle.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/HUD.class" afterPath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/HUD.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/HungerCore$1.class" afterPath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/HungerCore$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/HungerCore.class" afterPath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/HungerCore.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/hunger-core/plugin.yml" afterPath="$PROJECT_DIR$/out/production/hunger-core/plugin.yml" />
-      <change beforePath="$PROJECT_DIR$/src/me/yb/hungercore/EventHandle.java" afterPath="$PROJECT_DIR$/src/me/yb/hungercore/EventHandle.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/Game.class" afterPath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/Game.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/hunger-core/me/yb/hungercore/HUD.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/me/yb/hungercore/Game.java" afterPath="$PROJECT_DIR$/src/me/yb/hungercore/Game.java" />
       <change beforePath="$PROJECT_DIR$/src/me/yb/hungercore/HUD.java" afterPath="$PROJECT_DIR$/src/me/yb/hungercore/HUD.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/yb/hungercore/HungerCore.java" afterPath="$PROJECT_DIR$/src/me/yb/hungercore/HungerCore.java" />
-      <change beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="$PROJECT_DIR$/src/plugin.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,17 +24,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HUD.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HUD.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/HUD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="67" column="89" lean-forward="false" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
+            <state relative-caret-position="538">
+              <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HungerCore.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HungerCore.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/HungerCore.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -75,12 +70,12 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            <state relative-caret-position="765">
+              <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1586#1587#0" expanded="true" />
-                <element signature="e#1647#1648#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1705#1706#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -429,6 +424,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/HUD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/EventHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="86" lean-forward="false" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/InventoryEdit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -447,34 +470,6 @@
             <element signature="e#897#898#0" expanded="true" />
             <element signature="e#940#941#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/EventHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="26" column="86" lean-forward="false" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1647#1648#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/yb/hungercore/HUD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="67" column="89" lean-forward="false" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>

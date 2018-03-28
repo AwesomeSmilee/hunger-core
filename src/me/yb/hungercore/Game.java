@@ -19,7 +19,7 @@ public class Game {
             // Displays
             if (HungerCore.inGame.contains(p)) {
                 HUD.displayMenu(p, yaw);
-                HUD.displayBossBar(p, yaw);
+                HUD.displayBossBar(p, yaw, (int)p.getLocation().getX(), (int)p.getLocation().getZ());
             } else {
 
             }

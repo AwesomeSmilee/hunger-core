@@ -35,47 +35,46 @@ public class HUD {
             if (!menu.get(sel).equals(HungerCore.menuSel.get(p))) {
                 p.playSound(p.getLocation(), Sound.BLOCK_DISPENSER_FAIL, 1.0f, 1.0f);
             }
-            if (sel >= 0) {
-                HungerCore.menuSel.replace(p, menu.get(sel));
-            } else {
-                HungerCore.menuSel.replace(p, "none");
-            }
-            // Put selected item into display
-            if (sel != -1) {
-                for (int i = 0; i < menu.size(); i++) {
-                    if (i == sel) {
-                        s1 = s1 + "§a§l ";
-                    } else {
-                        if ((i + 1) % 2 == 0) {
-                            s1 = s1 + "§3 ";
-                        } else {
-                            s1 = s1 + "§7 ";
-                        }
-                    }
-                    s1 = s1 + menu.get(i);
-                }
-            } else {
-                for (int i = 0; i < menu.size(); i++) {
+        }
+        if (sel >= 0) {
+            HungerCore.menuSel.replace(p, menu.get(sel));
+        } else {
+            HungerCore.menuSel.replace(p, "none");
+        }
+        // Put selected item into display
+        if (sel != -1) {
+            for (int i = 0; i < menu.size(); i++) {
+                if (i == sel) {
+                    s1 = s1 + "§a§l ";
+                } else {
                     if ((i + 1) % 2 == 0) {
                         s1 = s1 + "§3 ";
                     } else {
                         s1 = s1 + "§7 ";
                     }
-                    s1 = s1 + menu.get(i);
                 }
+                s1 = s1 + menu.get(i);
             }
-            // Display
-            // TODO : Something's broken here and I can't be bothered to fix it right now
-            p.sendTitle("§2HUNGER²", s1, 0, 20, 10);
-            ActionBarAPI.sendActionBar(p, "§7[§2Mouse§7] §3Select §8| §7[§2LClick§7] §3Confirm");
+        } else {
+            for (int i = 0; i < menu.size(); i++) {
+                if ((i + 1) % 2 == 0) {
+                    s1 = s1 + "§3 ";
+                } else {
+                    s1 = s1 + "§7 ";
+                }
+                s1 = s1 + menu.get(i);
+            }
         }
+        // Display
+        p.sendTitle("§2HUNGER²", s1, 0, 20, 10);
+        ActionBarAPI.sendActionBar(p, "§7[§2Mouse§7] §3Select §8| §7[§2LClick§7] §3Confirm");
     }
-    public static void displayBossBar(Player p, Float yaw) {
+    public static void displayBossBar(Player p, Float yaw, int x, int z) {
         if (!HungerCore.bossBars.containsKey(p)) {
             HungerCore.bossBars.put(p, Bukkit.createBossBar("", BarColor.GREEN, BarStyle.SOLID));
         }
         BossBar bar = HungerCore.bossBars.get(p);
-        bar.setTitle(compass(yaw));
+        bar.setTitle(compass(yaw) + " §8Grid " + grid(x, z));
         bar.addPlayer(p);
     }
     public static String compass(Float yaw) {
@@ -100,6 +99,18 @@ public class HUD {
                 ret = ret + " §7" + out;
             }
         }
+        return ret;
+    }
+    public static String grid(int x, int z) {
+        x = (x + 15000) / 30;
+        x = x > 999 ? 999 : x;
+        x = x < 0 ? 0 : x;
+        z = (z + 15000) / 30;
+        z = z > 999 ? 999 : z;
+        z = z < 0 ? 0 : z;
+        String gridX = String.format("%3s", Integer.toString(x)).replace(' ', '0');
+        String gridZ = String.format("%3s", Integer.toString(z)).replace(' ', '0');
+        String ret = "§7" + gridX + "§3" + gridZ;
         return ret;
     }
 }
