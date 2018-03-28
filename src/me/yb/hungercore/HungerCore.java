@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class HungerCore extends JavaPlugin {
     public static HungerCore instance;
     public static ArrayList<Player> inGame = new ArrayList<>();
-    public static HashMap<Player, Integer> menuSel = new HashMap<>();
+    public static HashMap<Player, String> menuSel = new HashMap<>();
     @Override
     public void onEnable() {
         System.out.print("[HC] HungerCore class loaded");
