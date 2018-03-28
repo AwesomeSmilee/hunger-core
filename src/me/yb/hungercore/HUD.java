@@ -66,10 +66,14 @@ public class HUD {
                 s1 = s1 + menu.get(i);
             }
         }
-        if (sel != HungerCore.menuSel.get(p)) {
+        if (menu.get(sel) != HungerCore.menuSel.get(p)) {
             p.playSound(p.getLocation(), Sound.BLOCK_DISPENSER_FAIL, 1.0f, 1.0f);
         }
-        HungerCore.menuSel.replace(p, sel);
+        if (sel != -1) {
+            HungerCore.menuSel.replace(p, menu.get(sel));
+        } else {
+            HungerCore.menuSel.replace(p, "none");
+        }
         // Display
         p.sendTitle("§2HUNGER²", s1, 0, 20, 10);
         ActionBarAPI.sendActionBar(p, "§7[§2Mouse§7] §3Select §8| §7[§2LClick§7] §3Confirm");
