@@ -22,7 +22,7 @@ public class HUD {
         p.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, Integer.MAX_VALUE, -1, false, false), true);
         if (!HungerCore.inGame.contains(p)) {
             HungerCore.inGame.add(p);
-            HungerCore.menuSel.put(p, -1);
+            HungerCore.menuSel.put(p, "none");
         }
         for (Player other : Bukkit.getOnlinePlayers()) {
             other.hidePlayer(HungerCore.instance, p);
