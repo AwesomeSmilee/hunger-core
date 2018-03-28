@@ -1,5 +1,5 @@
 name: HungerCore
-version: 0.0.1
+version: 0.1.0
 author: YB
 main: me.yb.hungercore.HungerCore
 description: Hunger² rewrite core plugin

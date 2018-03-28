@@ -2,10 +2,13 @@ package me.yb.hungercore;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.boss.BarColor;
+import org.bukkit.boss.BarStyle;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -23,21 +26,36 @@ public class EventHandle implements Listener {
         e.setJoinMessage(null);
         Bukkit.broadcastMessage("§a+ §2» §f" + p.getName() + " §7joined the server!");
         // Take them to the menu on spawn
-        HUD.menu(p);
+        Game.menu(p);
     }
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
         Player p = e.getPlayer();
         e.setQuitMessage(null);
         Bukkit.broadcastMessage("§c- §2» §f" + p.getName() + " §7left the server.");
-
+        // Remove variables
+        HungerCore.bossBars.remove(p);
+        HungerCore.inGame.remove(p);
+        HungerCore.menuSel.remove(p);
     }
     @EventHandler
     public void onClick(PlayerInteractEvent e) {
         Player p = e.getPlayer();
         if (e.getAction() == Action.LEFT_CLICK_AIR) {
             if (!HungerCore.inGame.contains(p)) {
-
+                switch (HungerCore.menuSel.get(p)) {
+                    case "New Game": Game.newGame(p);
+                    case "Settings": Game.settings(p);
+                }
+            }
+        }
+    }
+    @EventHandler
+    public void onDamage(EntityDamageEvent e) {
+        if (e.getEntity() instanceof Player) {
+            Player p = (Player)e.getEntity();
+            if (!HungerCore.inGame.contains(p)) {
+                e.setCancelled(true);
             }
         }
     }
